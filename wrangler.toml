@@ -1,0 +1,10 @@
+name = "crypto-price"
+main = "build/worker/shim.mjs"
+compatibility_date = "2024-09-18"
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
+
+# wrangler.toml
+[observability]
+enabled = true
