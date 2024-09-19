@@ -17,3 +17,5 @@ npx wrangler dev
 npx wrangler deploy  
 Wrangler会让你登录 Cloudflare 账户，跳转浏览器登录即可
 
+## Error 😂
+"Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."

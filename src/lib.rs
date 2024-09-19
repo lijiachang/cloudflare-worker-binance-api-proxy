@@ -2,7 +2,11 @@ use worker::*;
 use reqwest::Client;
 
 async fn proxy_binance(path: &str, query: &str) -> Result<Response> {
-    let client = Client::new();
+    let client = Client::builder()
+        .user_agent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:130.0) Gecko/20100101 Firefox/130.0")
+        .build()
+        .unwrap();
+
     let binance_url = format!("https://api.binance.com{}", path);
     let url = if !query.is_empty() {
         format!("{}?{}", binance_url, query)
